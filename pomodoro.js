@@ -123,5 +123,9 @@ const stopTimer = () => {
 startButton.addEventListener("click", startTimer);
 stopButton.addEventListener("click", stopTimer);
 
+startButton.addEventListener("click", () => {
+    focusAlarm.play().catch(error => console.warn("Focus alarm blocked:", error));
+    startTimer();
+});
 // 초기 상태 설정
 resetTimer();
