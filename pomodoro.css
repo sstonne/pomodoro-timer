@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    min-height: 100vh; /* 화면 전체 높이를 기준으로 정렬 */
+    margin: 0; /* 기본 margin 제거 */
+}
+.timer-name {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: #93A9C2; 
+    margin-bottom: 20px; 
+    text-align: center; 
+}
+.timer-container {
+    margin: 50px auto;
+    background-color: white;
+    width: 550px;
+    padding: 20px;
+    border-radius: 10px;
+    transform-origin: center;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.timer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+}
+
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotate(-0deg); /* 12시 시작점으로 */
+    border: 8px solid #ddd;
+    box-sizing: border-box; 
+}
+
+.time-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: black;
+    z-index: 2; /* 시간 표시가 가장 위에 위치 */
+}
+
+.controls {
+    margin: 10px 0;
+}
+
+input {
+    width: 50px;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.button-container {
+    display: flex; /* 버튼을 가로로 나열 */
+    justify-content: center; /* 버튼을 가운데 정렬 */
+    gap: 10px; /* 버튼 사이의 간격 */
+    margin-top: 20px; /* 버튼 컨테이너 위쪽 여백 추가 */
+}
+button {
+    padding: 10px,10px;
+    background-color: #EF9230;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+button:hover {
+    background-color: #FF9C33;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2)
+}
+
+#stopButton {
+    background-color: #9DB5CF; 
+}
+
+#stopButton:hover {
+    background-color: #A8C2DE;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2)
+}
+
+@media (max-width: 768px) {
+    .timer-container {
+        transform: scale(0.9);
+    }
+}
