@@ -16,8 +16,8 @@ let focusTime = 4800; // 기본값 80분 (초)
 let breakTime = 600;  // 기본값 10분 (초)
 
 // 알람 사운드
-const focusAlarm = new Audio("CHIME8.mp3"); // 집중 시작 알람
-const breakAlarm = new Audio("CHIME7.mp3"); // 휴식 시작 알람
+const focusAlarm = new Audio("./CHIME8.mp3"); // 집중 시작 알람
+const breakAlarm = new Audio("./CHIME7.mp3"); // 휴식 시작 알람
 
 focusAlarm.preload = "auto"; 
 breakAlarm.preload = "auto";
